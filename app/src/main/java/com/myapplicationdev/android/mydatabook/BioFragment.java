@@ -1,12 +1,15 @@
 package com.myapplicationdev.android.mydatabook;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +62,9 @@ public class BioFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bio, container, false);
+        View view = inflater.inflate(R.layout.fragment_bio, container, false);
+        TextView textView = view.findViewById(R.id.tvBio);
+
+        return view;
     }
 }
